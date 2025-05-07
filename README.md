@@ -13,8 +13,9 @@ Dog Gallery — Gallery of random dogs
 
 1. Склонируйте репозиторий или скачайте `.zip`:
    ```bash
-   git clone https://github.com/your-username/dog-gallery.git
- 2.  Откройте файл index.html в браузере — и всё готово!
+   [git clone https://github.com/your-username/dog-gallery.git]
+   (https://github.com/ZakharovEvgeny-OEN/Dog-Gallery.git)
+ 2.  Откройте файл dogApi.html в браузере — и всё готово!
     Технологии
 HTML5
 
