@@ -1,26 +1,26 @@
 # Dog-Gallery
-Dog Gallery — Gallery of random dogs
-Простой сайт-галерея, который отображает изображения случайных собак с помощью [Dog CEO API](https://dog.ceo/dog-api/).
+Dog Gallery — Gallery of random dogs A simple gallery site that displays images of random dogs using the Dog CEO API.
 
- Описание
+Description
 
-- При загрузке страницы сразу отображаются **5 случайных собак**.
-- Кнопка **"Показать других собак"** загружает новые случайные изображения.
-- Используется адаптивная сетка для удобного отображения на разных устройствах.
-- Лёгкий и современный дизайн с плавной анимацией.
+When the page loads, 5 random dogs are immediately displayed.
+The "Show other dogs" button loads new random images.
+Uses an adaptive grid for easy display on different devices.
+Lightweight and modern design with smooth animation.
+How to launch
 
- Как запустить
-
-1. Склонируйте репозиторий или скачайте `.zip`:
+1. Clone the repository or download `.zip`:
    ```bash
    [git clone https://github.com/your-username/dog-gallery.git]
    (https://github.com/ZakharovEvgeny-OEN/Dog-Gallery.git)
- 2.  Откройте файл dogApi.html в браузере — и всё готово!
-    Технологии
+ 2. Open the dogApi.html file in your browser and you're done!
+    Technologies
 HTML5
 
-CSS3 (гибкая сетка и стилизация)
+CSS3 (flexible grid and styling)
 
-JavaScript (вызов API и динамическая вставка изображений)
+JavaScript (API call and dynamic image insertion)
 
 Dog CEO API
+
+Attention!!! In Russia it only works via VPN
