@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dog Gallery</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fceabb, #f8b500);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 2.5em;
+      color: #333;
+      text-shadow: 1px 1px 3px #fff;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      width: 100%;
+      max-width: 1200px;
+      box-sizing: border-box;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    button {
+      margin-bottom: 30px;
+      padding: 12px 24px;
+      font-size: 18px;
+      background-color: #ff7043;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #d84315;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🐶 Собакины 🐶</h1>
+  <button onclick="loadDogs()">Показать других собакинов</button>
+  <div class="gallery" id="dogGallery"></div>
+
+  <script>
+    async function loadDogs() {
+      const gallery = document.getElementById('dogGallery');
+      gallery.innerHTML = ''; // очистить галерею
+      const dogPromises = Array.from({ length: 5 }, () =>
+        fetch('https://dog.ceo/api/breeds/image/random').then(res => res.json())
+      );
+
+      const dogResults = await Promise.all(dogPromises);
+      dogResults.forEach(data => {
+        const img = document.createElement('img');
+        img.src = data.message;
+        img.alt = 'Dog';
+        gallery.appendChild(img);
+      });
+    }
+
+    // Загрузка собак при первом входе
+    window.onload = loadDogs;
+  </script>
+
+</body>
+</html>
